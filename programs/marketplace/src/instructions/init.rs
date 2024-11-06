@@ -12,7 +12,7 @@ pub struct Initialize<'info> {
     #[account(
         init,
         payer = admin,
-        seeds = [b"marketplace", name.as_str().as_bytes()],
+        seeds = [b"marketplace", name.as_bytes()],
         bump,
         space = Marketplace::INIT_SPACE,
     )]

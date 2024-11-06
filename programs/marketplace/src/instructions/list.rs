@@ -8,7 +8,7 @@ pub struct List<'info> {
     #[account(mut)]
     pub maker: Signer<'info>,
     #[account(
-        seeds = [b"marketplace", marketplace.name.as_str().as_bytes()],
+        seeds = [b"marketplace", marketplace.name.as_bytes()],
         bump = marketplace.bump,
     )]
     pub marketplace: Account<'info, Marketplace>,
